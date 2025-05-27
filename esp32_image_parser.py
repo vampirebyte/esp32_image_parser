@@ -189,7 +189,7 @@ def add_elf_symbols(elf):
     fh = open("symbols_dump.txt", "r")
     lines = fh.readlines()
 
-    bind_map = {"LOCAL" : STB.STB_LOCAL, "GLOBAL" : STB.STB_GLOBAL}
+    bind_map = {"LOCAL" : STB.STB_LOCAL, "GLOBAL" : STB.STB_GLOBAL, "WEAK" : STB.STB_WEAK}
     type_map = {"NOTYPE": STT.STT_NOTYPE, "OBJECT" : STT.STT_OBJECT, "FUNC" : STT.STT_FUNC, "FILE" : STT.STT_FILE}
 
     for line in lines:
